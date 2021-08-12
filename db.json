@@ -25,6 +25,38 @@
       ]
     }
   ],
+  "info": [
+    {
+      "name": "N° de commande : ",
+      "number": "405560003"
+    },
+    {
+      "name": "Date de commande : ",
+      "number": "1 mai 2019"
+    },
+    {
+      "name": "Date d’expédition : ",
+      "number": "3 mai 2019"
+    }
+  ],
+  "delivery": [
+    {
+      "img": "https://raw.githubusercontent.com/OlgaSpirkina/TediBer/4cfbc34806be7865789f59f971d915dbef468429/src/img/box.svg",
+      "checked": true
+    },
+    {
+      "img": "https://raw.githubusercontent.com/OlgaSpirkina/TediBer/4cfbc34806be7865789f59f971d915dbef468429/src/img/packing.svg",
+      "checked": true
+    },
+    {
+      "img": "https://raw.githubusercontent.com/OlgaSpirkina/TediBer/4cfbc34806be7865789f59f971d915dbef468429/src/img/delivery.svg",
+      "checked": false
+    },
+    {
+      "img": "https://raw.githubusercontent.com/OlgaSpirkina/TediBer/4cfbc34806be7865789f59f971d915dbef468429/src/img/door.svg",
+      "checked": false
+    }
+  ],
   "navbar": [
     {
       "title": "nos produits",

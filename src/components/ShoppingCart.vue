@@ -1,7 +1,12 @@
 <template>
+  <!-- la section du panier -->
   <div class="purchases-container">
     <p className="article-quantity">ARTICLES (4)</p>
-    <div :article="article" :key="article.id" v-for="article in articles" class="article-container">
+    <div
+      :article="article"
+      :key="article.id"
+      v-for="article in articles"
+      class="article-container">
       <img :src="article.image" :alt="article.title" />
       <div class="article-text-container">
         <p>{{article.title}}</p>
@@ -67,5 +72,69 @@ export default {
 .font-light{
   font-weight: lighter;
 }
-
+@media only screen and (max-width : 550px) {
+  .purchases-container{
+    width: 100%;
+    height: inherit;
+  }
+  .article-container{
+    width: 80%;
+  }
+  .article-text-container p:first-child{
+    font-size: 1rem;
+  }
+  .article-text-container p:nth-child(2){
+    font-size: .9rem;
+  }
+}
+@media only screen and (min-width : 501px) and (max-width : 800px) {
+  .purchases-container{
+    width: 100%;
+    height: inherit;
+  }
+  .article-container{
+    width: 75%;
+    margin: 1rem auto;
+  }
+  .article-text-container p:first-child{
+    font-size: 1rem;
+  }
+  .article-text-container p:nth-child(2){
+    font-size: .9rem;
+  }
+}
+@media only screen and (min-width : 801px) and (max-width : 1000px) {
+  .purchases-container{
+    width: 50%;
+  }
+  .article-container{
+    padding: 1rem 0;
+  }
+  .article-text-container p:first-child{
+    font-size: 1.2rem;
+  }
+  .article-text-container p:nth-child(2){
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width : 1001px) and (max-width : 1400px) {
+  .article-container{
+    margin: 1rem auto;
+    padding: 1rem 0;
+  }
+  .purchases-container{
+    width: 45%;
+  }
+  .article-text-container p:first-child{
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (min-width : 1401px) and (max-width : 1900px) {
+  .purchases-container{
+    width: 40%;
+  }
+  .article-text-container p:first-child{
+    font-size: 1.3rem;
+  }
+}
 </style>
