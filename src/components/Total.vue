@@ -4,7 +4,7 @@
       <p
         :price="price"
         :key="price.id"
-        v-for="price in totalPrice"
+        v-for="price in TotalData"
         :class="price.name.toLowerCase()"
       >
           {{price.name}}
@@ -17,8 +17,23 @@
 <script>
 export default {
   name: 'Total',
-  props: {
-    totalPrice: Array,
+  data(){
+    return{
+      TotalData: [
+        {
+          "name": "Sous-totale",
+          "price": "1130"
+        },
+        {
+          "name": "Livraison",
+          "price": "GRATUITE"
+        },
+        {
+          "name": "TOTAL :",
+          "price": "1130"
+        }
+      ]
+    }
   },
 }
 </script>

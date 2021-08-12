@@ -25,12 +25,9 @@
    />
    <Banner title="total commande" />
    <Total
-    :totalPrice="totalPrice"
    />
    <Banner title="besoin d'aide ?" />
-   <!-- <Help
-    :helpSection="helpSection"
-   /> -->
+   <Help />
 </template>
 
 <script>
@@ -41,7 +38,8 @@ import Banner from './components/Banner.vue'
 import DeliverySection from './components/DeliverySection.vue'
 import PaymentInfo from './components/PaymentInfo.vue'
 import Total from './components/Total.vue'
-// import Help from './components/Help.vue'
+import Help from './components/Help.vue'
+
 export default {
   name: 'App',
   components: {
@@ -52,7 +50,7 @@ export default {
     DeliverySection,
     PaymentInfo,
     Total,
-    // Help,
+    Help,
   },
   data(){
     return{
@@ -61,8 +59,6 @@ export default {
       infoShopping: [],
       deliveryStatus: [],
       deliverySection: [],
-      totalPrice: [],
-      // helpSection: [],
       api: 'https://my-json-server.typicode.com/OlgaSpirkina/Tedi/',
     }
   },
@@ -92,11 +88,9 @@ export default {
       const data = await res.json()
       return data
     },
-    async totalPriceFunc(){
-      const res = await fetch(this.api + 'total')
-      const data = await res.json()
-      return data
-    },
+    // async totalPriceFunc(){
+    //   TotalData.map()
+    // },
     // async helpSectionFunc(){
     //   const res = await fetch('http://localhost:5000/help')
     //   const data = await res.json()
@@ -110,7 +104,7 @@ export default {
     this.infoShopping = await this.addInfoShopping()
     this.deliveryStatus = await this.delivery()
     this.deliverySection = await this.deliverySectionFunc()
-    this.totalPrice = await this.totalPriceFunc()
+    // this.totalPrice = await this.totalPriceFunc()
     // this.helpSection = await this.HelpSectionFunc()
   },
 }
