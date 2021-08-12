@@ -97,7 +97,7 @@ nav{
   top: 0;
   z-index: 1;
   width: 100%;
-  height: 15vh
+  height: 15vh;
 }
 .image-visible{
   display: inline-block;

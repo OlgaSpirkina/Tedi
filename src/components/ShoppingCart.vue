@@ -32,7 +32,7 @@ export default {
   position: relative;
   float: right;
   width: 30vw;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   color: var(--tedicolor);
 }
 .article-container{
@@ -74,11 +74,11 @@ export default {
 }
 @media only screen and (max-width : 550px) {
   .purchases-container{
-    width: 100%;
+    width: 90vw;
     height: inherit;
   }
   .article-container{
-    width: 80%;
+    width: 90%;
   }
   .article-text-container p:first-child{
     font-size: 1rem;

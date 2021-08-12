@@ -4,7 +4,7 @@
     :imagePathText="require('./assets/logo-text.png')"
     :imagePathShoppingCart="require('./assets/shoppingcart.png')"
    />
-   <p></p>
+   <Banner title="suivi de commande" />
    <div class="container-horizontal shopping">
      <Purchase
        :infoShopping="infoShopping"
@@ -14,6 +14,20 @@
       :articles="articles"
     />
    </div>
+   <Banner title="informations sur la livraison" />
+   <DeliverySection
+    :deliverySection="deliverySection"
+   />
+   <Banner title="informations sur le paement" />
+   <PaymentInfo
+    :visaPath="require('./assets/logo-cb.jpg')"
+    title="VISA"
+   />
+   <Banner title="total commande" />
+   <Total
+    :totalPrice="totalPrice"
+   />
+   <Banner title="besoin d'aide ?" />
 
 </template>
 
@@ -21,12 +35,20 @@
 import Navbar from './components/Navbar.vue'
 import ShoppingCart from './components/ShoppingCart.vue'
 import Purchase from './components/Purchase.vue'
+import Banner from './components/Banner.vue'
+import DeliverySection from './components/DeliverySection.vue'
+import PaymentInfo from './components/PaymentInfo.vue'
+import Total from './components/Total.vue'
 export default {
   name: 'App',
   components: {
     Navbar,
     ShoppingCart,
     Purchase,
+    Banner,
+    DeliverySection,
+    PaymentInfo,
+    Total,
   },
   data(){
     return{
@@ -34,6 +56,8 @@ export default {
       articles: [],
       infoShopping: [],
       deliveryStatus: [],
+      deliverySection: [],
+      totalPrice: [],
     }
   },
   methods: {
@@ -56,7 +80,17 @@ export default {
       const res = await fetch('http://localhost:5000/delivery')
       const data = await res.json()
       return data
-    }
+    },
+    async deliverySectionFunc(){
+      const res = await fetch('http://localhost:5000/deliverySection')
+      const data = await res.json()
+      return data
+    },
+    async totalPriceFunc(){
+      const res = await fetch('http://localhost:5000/total')
+      const data = await res.json()
+      return data
+    },
   },
 
   async created(){
@@ -64,6 +98,8 @@ export default {
     this.articles = await this.addShoppingCart()
     this.infoShopping = await this.addInfoShopping()
     this.deliveryStatus = await this.delivery()
+    this.deliverySection = await this.deliverySectionFunc()
+    this.totalPrice = await this.totalPriceFunc()
   },
 }
 </script>
@@ -101,15 +137,23 @@ body{
   border-bottom: 1px solid var(--lightgrey);
   box-shadow: 1px 2.5px 2px 2.5px var(--verylightgrey);
   background-color: #fff;
-  margin-bottom: 10rem;
+  /* margin-bottom: 10rem; */
 }
 .shopping{
-  margin-top: 10rem;
+  margin-top: 3rem;
   height: 55vh;
+  align-items: flex-start;
 }
-@media only screen and (max-device-width : 800px) {
+@media only screen and (max-width : 800px) {
   .container-horizontal{
     flex-direction: column;
+    align-items: center;
+    height: inherit;
+  }
+}
+@media only screen and (min-width : 801px) {
+  .container-horizontal{
+    height: inherit;
   }
 }
 

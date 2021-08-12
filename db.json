@@ -98,5 +98,38 @@
       "path": "/contacts",
       "content": null
     }
+  ],
+  "deliverySection":
+  [
+    {
+      "name": "adress de collecte",
+      "info": ["POINT RELAIS", "57 rue Jean Pierre Timbaud", "PARIS", "75011", "France"]
+    },
+    {
+      "name": "vos coordonnées",
+      "info": ["Shannon Honniball", "0664262272"]
+    },
+    {
+      "name": "livraison estimée",
+      "info": ["jeudi 9 mai 2019"]
+    },
+    {
+      "name": "mode de livraison",
+      "info": ["livraison standard en point relais"]
+    }
+  ],
+  "total":[
+    {
+      "name": "Sous-totale",
+      "price": "1130"
+    },
+    {
+      "name": "Livraison",
+      "price": "GRATUITE"
+    },
+    {
+      "name": "TOTAL :",
+      "price": "1130"
+    }
   ]
 }

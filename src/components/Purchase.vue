@@ -36,6 +36,7 @@ export default {
 <style scope>
 .purchase-parent{
   width: 30vw;
+  margin-top: 2rem;
   border-bottom: 1px solid;
   color: var(--tedicolor);
 }
@@ -62,8 +63,7 @@ export default {
 @media only screen and (min-width: 350px) and (max-width : 550px) {
 .purchase-parent{
   width: 80%;
-  margin-top: 30rem;
-  margin-left: 1rem;
+  margin-top: 10rem;
   }
 .purchase-info{
   width: 90%;
