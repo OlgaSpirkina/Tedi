@@ -1,13 +1,12 @@
 <template>
-  <div >
+  <div class="help_dropdown">
     <div
-      :item="item"
-      :key="item.id"
-      class="item_dropdown"
-      v-for="item in helpSection"
+      :help="help"
+      :key="help.id"
+      v-for="help in helpSection"
     >
       <p
-        class="item_paragraph">{{item.name}}</p>
+      v-if="help.id !== 0">{{help.name}}</p>
       <i
         @click="hiddenParagraph"
         ref="chevronDown"
@@ -17,7 +16,7 @@
     <div
       ref="infoHidden"
       class="info-hidden">
-      {{item.info}}
+      {{help.info}}
     </div>
   </div>
 </template>
