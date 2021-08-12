@@ -28,7 +28,9 @@
     :totalPrice="totalPrice"
    />
    <Banner title="besoin d'aide ?" />
-
+   <!-- <Help
+    :helpSection="helpSection"
+   /> -->
 </template>
 
 <script>
@@ -39,6 +41,7 @@ import Banner from './components/Banner.vue'
 import DeliverySection from './components/DeliverySection.vue'
 import PaymentInfo from './components/PaymentInfo.vue'
 import Total from './components/Total.vue'
+// import Help from './components/Help.vue'
 export default {
   name: 'App',
   components: {
@@ -49,6 +52,7 @@ export default {
     DeliverySection,
     PaymentInfo,
     Total,
+    // Help,
   },
   data(){
     return{
@@ -58,39 +62,46 @@ export default {
       deliveryStatus: [],
       deliverySection: [],
       totalPrice: [],
+      // helpSection: [],
+      api: 'https://my-json-server.typicode.com/OlgaSpirkina/Tedi/',
     }
   },
   methods: {
     async addNavItems(){
-      const res = await fetch('http://localhost:5000/navbar')
+      const res = await fetch(this.api + 'navbar')
       const data = await res.json()
       return data
     },
     async addShoppingCart(){
-      const res = await fetch('http://localhost:5000/purchases')
+      const res = await fetch(this.api + 'purchases')
       const data = await res.json()
       return data
     },
     async addInfoShopping(){
-      const res = await fetch('http://localhost:5000/info')
+      const res = await fetch(this.api + 'info')
       const data = await res.json()
       return data
     },
     async delivery(){
-      const res = await fetch('http://localhost:5000/delivery')
+      const res = await fetch(this.api + 'delivery')
       const data = await res.json()
       return data
     },
     async deliverySectionFunc(){
-      const res = await fetch('http://localhost:5000/deliverySection')
+      const res = await fetch(this.api + 'deliverySection')
       const data = await res.json()
       return data
     },
     async totalPriceFunc(){
-      const res = await fetch('http://localhost:5000/total')
+      const res = await fetch(this.api + 'total')
       const data = await res.json()
       return data
     },
+    // async helpSectionFunc(){
+    //   const res = await fetch('http://localhost:5000/help')
+    //   const data = await res.json()
+    //   return data
+    // },
   },
 
   async created(){
@@ -100,6 +111,7 @@ export default {
     this.deliveryStatus = await this.delivery()
     this.deliverySection = await this.deliverySectionFunc()
     this.totalPrice = await this.totalPriceFunc()
+    // this.helpSection = await this.HelpSectionFunc()
   },
 }
 </script>
