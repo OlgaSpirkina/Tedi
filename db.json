@@ -27,11 +27,6 @@
   ],
   "navbar": [
     {
-      "title": "https://raw.githubusercontent.com/OlgaSpirkina/TediBer/main/src/img/logo-text.png",
-      "path": null,
-      "content": null
-    },
-    {
       "title": "nos produits",
       "path": "/pruducts",
       "content": ["matelas", "oreillers", "couettes"]
@@ -69,11 +64,6 @@
     {
       "title": "contactez-nous",
       "path": "/contacts",
-      "content": null
-    },
-    {
-      "title": "https://raw.githubusercontent.com/OlgaSpirkina/TediBer/main/src/img/shoppingcart.png",
-      "path": "/shoppingcart",
       "content": null
     }
   ]
