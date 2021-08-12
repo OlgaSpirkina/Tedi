@@ -4,20 +4,28 @@
     :imagePathText="require('./assets/logo-text.png')"
     :imagePathShoppingCart="require('./assets/shoppingcart.png')"
    />
+   <p></p>
+   <div class="container-horizontal">
+    <ShoppingCart
+     :articles="articles"
+    />
+   </div>
 
 </template>
 
 <script>
 import Navbar from './components/Navbar.vue'
-
+import ShoppingCart from './components/ShoppingCart.vue'
 export default {
   name: 'App',
   components: {
     Navbar,
+    ShoppingCart,
   },
   data(){
     return{
       navElems: [],
+      articles: [],
     }
   },
   methods: {
@@ -26,9 +34,16 @@ export default {
       const data = await res.json()
       return data
     },
+    async addShoppingCart(){
+      const res = await fetch('http://localhost:5000/purchases')
+      const data = await res.json()
+      return data
+    },
   },
+
   async created(){
     this.navElems = await this.addNavItems()
+    this.articles = await this.addShoppingCart()
   },
 }
 </script>
@@ -68,4 +83,5 @@ body{
   background-color: #fff;
   margin-bottom: 10rem;
 }
+
 </style>

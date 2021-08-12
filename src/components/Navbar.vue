@@ -138,6 +138,7 @@ a{
     color: var(--tedicolor);
     font-size: 3.5rem;
     padding: .5rem;
+    z-index: 99;
   }
   .fa-bars:hover{
     transition: transform 3s;
