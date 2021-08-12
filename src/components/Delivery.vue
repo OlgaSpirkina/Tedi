@@ -130,9 +130,12 @@ export default {
   border-top: 1px solid;
   padding-top: .5rem;
 }
-@media only screen and (max-width : 550px) {
-.paragraph-dropdown{
-  width: 100%;
+@media only screen and (max-width : 1400px) {
+  .paragraph-dropdown{
+    width: 100%;
+    }
+  .delivery-status{
+    width: 100%;
   }
 }
 </style>
