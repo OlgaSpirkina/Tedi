@@ -1,24 +1,10 @@
-# tedi
+# TediBer
+Le projet d'une page web représentant une maquette du site web responsive réalisé avec Vue.js
 
-## Project setup
-```
-npm install
-```
+![grab-landing-page](https://raw.githubusercontent.com/OlgaSpirkina/TediBer/main/src/assets/tediber.gif)  
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Les technologies utilisées:
+1. Vue.js 3.0.0
+2. Css
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+---

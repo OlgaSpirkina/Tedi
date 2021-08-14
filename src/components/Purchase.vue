@@ -54,7 +54,7 @@ export default {
 }
 @media only screen and (max-width : 349px){
 .purchase-info{
-  width: 80%;
+  width: 100%;
   }
 .purchase-parent{
   width: 90vw;
@@ -62,11 +62,11 @@ export default {
 }
 @media only screen and (min-width: 350px) and (max-width : 550px) {
 .purchase-parent{
-  width: 80%;
-  margin-top: 10rem;
+  width: 90%;
+  margin-top: 1rem;
   }
 .purchase-info{
-  width: 90%;
+  width: 100%;
   }
 }
 @media only screen and (min-width: 551px) and (max-width : 800px) {
@@ -74,7 +74,7 @@ export default {
   width: 80%;
 }
 .purchase-info{
-  width: 60%;
+  width: 100%;
   }
 }
 @media only screen and (min-width: 801px) and (max-width : 1000px) {
@@ -90,7 +90,7 @@ export default {
   width: 40%;
 }
 .purchase-info{
-  width: 65%;
+  width: 80%;
   }
 }
 @media only screen and (min-width: 1401px) and (max-width : 1900px) {
@@ -98,7 +98,7 @@ export default {
   width: 40%;
 }
 .purchase-info{
-  width: 50%;
+  width: 60%;
   }
 }
 </style>

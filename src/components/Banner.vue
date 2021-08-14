@@ -56,7 +56,7 @@ h2 {
 }
 @media only screen and (max-width : 550px) {
   .banner-container{
-    width: 90%;
+    width: 100%;
     height: inherit;
   }
   .banner-container:first-of-type{
@@ -83,7 +83,7 @@ h2 {
     margin-top: .5rem;
   }
   .banner-container{
-    width: 90%;
+    width: 100%;
     height: inherit;
   }
   h2{
