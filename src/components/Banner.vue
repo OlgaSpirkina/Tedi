@@ -3,7 +3,7 @@
     <div class="heading-style">
       <span class="style-line"></span><h2>{{title.toUpperCase()}}</h2><span class="style-line"></span>
     </div>
-    <img class="zigzag-line" src="https://raw.githubusercontent.com/OlgaSpirkina/TediBer/b237b50975b848e8da759a48009c1f1b512c9787/public/zigzag.svg" alt="zigzag line" />
+    <img class="zigzag-line" src="../assets/zigzag.svg" alt="zigzag line" />
   </div>
 </template>
 
@@ -18,30 +18,33 @@ export default {
 
 <style scope>
 .banner-container{
+  width: 70vw;
+  margin: 0 auto;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 3rem 0;
 }
 .banner-container:first-of-type{
-  margin-top: 10rem;
+  margin-top: 11rem;
 }
+/* le texte et les deux spans de chaque côté du texte pour créer deux lignes horizontales */
 .heading-style{
-  width: 90vw;
+  width: 70vw;
   display: flex;
   justify-content: center;
 }
+/* les lignes horizontales de chaque côté du texte */
 .style-line{
   width: 50vw;
-  height: 5vh;
   border-top: 1px solid var(--tedicolor);
   margin-top: .5rem;
 }
 h2 {
   width: 100%;
   text-align: center;
-  line-height: 0.1em;
+  line-height: 1.5rem;
   margin: 0 auto;
   letter-spacing: 3px;
   font-weight: 400;
@@ -49,16 +52,21 @@ h2 {
 }
 .zigzag-line{
   width: 7vw;
+  margin-top: 1rem;
 }
 @media only screen and (max-width : 550px) {
   .banner-container{
+    width: 90%;
     height: inherit;
   }
-  .style-line{
-    width: 15vw;
+  .banner-container:first-of-type{
+    margin-top: 15rem;
+  }
+  .heading-style{
+    width: 100%;
   }
   .zigzag-line{
-    width: 35vw;
+    width: 30vw;
     margin-top: 0;
   }
   h2{
@@ -74,20 +82,20 @@ h2 {
     width: 15vw;
     margin-top: .5rem;
   }
+  .banner-container{
+    width: 90%;
+    height: inherit;
+  }
   h2{
     width: 100%;
-    line-height: 1.2rem;
   }
-  .style-line{
-    width: 15vw;
+  .heading-style{
+    width: 100%;
   }
 }
 @media only screen and (min-width : 1201px) and (max-width: 1400px) {
-  h2{
-    width: 90%;
-  }
   .zigzag-line{
-    width: 20vw;
+    width: 10vw;
     margin-top: 1rem;
   }
 }

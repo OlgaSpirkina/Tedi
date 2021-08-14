@@ -70,6 +70,7 @@ export default {
     border-right: none;
     border-bottom: 1px solid grey;
     padding-bottom: 1rem;
+    height: inherit;
   }
   .element_delivery div{
     margin-bottom: 1rem;

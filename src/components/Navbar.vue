@@ -36,10 +36,11 @@
             @click="toggleSubMenu"
           ></i>
           <div
-            ref="products" class="sub-menu">
-              <small
-              :key="index" v-for="(sub, index) in navElem.content"
-              >{{sub}}</small>
+            ref="products" class="sub-menu sub">
+              <span
+                :key="index" v-for="(sub, index) in navElem.content"
+                >{{sub}}
+              </span>
             </div>
         </div>
         <div
@@ -105,8 +106,20 @@ nav{
 .image-hidden{
   visibility: hidden;
 }
+span{
+  display: block;
+  margin: 1rem 0;
+}
+.sub{
+  position: absolute;
+  margin: 1rem 0;
+  background-color: #fff;
+  width: 9vw;
+}
 .sub-menu{
   display: none;
+
+  /* height: 10vh; */
 }
 .container-horizontal img{
   display: inline-block;
@@ -120,6 +133,7 @@ ul li{
   font-weight: 700;
   letter-spacing: 1.5px;
   color: var(--tedicolor);
+  cursor: pointer;
 }
 a{
   text-decoration: none;
@@ -165,7 +179,7 @@ a{
   }
   ul{
     position: absolute;
-    top: 4.5rem;
+    top: 6rem;
     left: 0;
     width: 100vw;
     height: 30vh;

@@ -34,7 +34,7 @@ export default {
 @media only screen and (max-width : 800px) {
   .visa-cb{
     width: 85%;
-    height: 4rem;
+    height: 3rem;
   }
 }
 @media only screen and (min-width : 801px) and (max-width : 1000px) {

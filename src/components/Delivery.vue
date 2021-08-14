@@ -1,6 +1,6 @@
 <template>
   <!-- composant Suivi commande qui contient le dropdown caché -->
-  <div class="paragraph-dropdown">
+  <div class="paragraph-dropdown-track">
     <p>Suivi commande
       <span>
         <i
@@ -126,12 +126,12 @@ export default {
 .turn_around{
   transform: rotate(180deg);
 }
-.paragraph-dropdown{
+.paragraph-dropdown-track{
   border-top: 1px solid;
   padding-top: .5rem;
 }
 @media only screen and (max-width : 1400px) {
-  .paragraph-dropdown{
+  .paragraph-dropdown-track{
     width: 100%;
     }
   .delivery-status{
