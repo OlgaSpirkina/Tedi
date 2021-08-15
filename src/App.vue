@@ -67,7 +67,7 @@ export default {
   // appelles sous la forme de await Promise.all vers apis fictifs crées avec my-json-server
   async created(){
     await Promise.all([
-      fetch(this.api + 'navbar'),
+      fetch(this.api + 'navba'),
       fetch(this.api + 'purchases'),
       fetch(this.api + 'info'),
       fetch(this.api + 'delivery'),
@@ -86,6 +86,10 @@ export default {
         this.deliveryStatus = values[3],
         this.deliverySection = values[4]
       }))
+      .catch((err) => {
+        console.log("There is an ERROR: " + err);
+        return err;
+      })
     })
   },
 }
