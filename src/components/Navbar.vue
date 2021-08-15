@@ -98,7 +98,7 @@ nav{
   top: 0;
   z-index: 1;
   width: 100%;
-  height: 17vh;
+  height: 15vh;
 }
 .image-visible{
   display: inline-block;
@@ -142,6 +142,11 @@ a{
 /* le menu bourger */
 .fa-bars{
   display: none;
+}
+@media (orientation: landscape) and (min-width : 300px){
+  nav{
+    height: 25vh;
+  }
 }
 @media screen and (max-width: 1199px) {
   .fa-bars{

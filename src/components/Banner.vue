@@ -54,6 +54,11 @@ h2 {
   width: 7vw;
   margin-top: 1rem;
 }
+@media (orientation: landscape) and (min-width : 700px){
+  .banner-container:first-of-type{
+    margin-top: 15rem;
+  }
+}
 @media only screen and (max-width : 550px) {
   .banner-container{
     width: 100%;
