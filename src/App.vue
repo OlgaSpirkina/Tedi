@@ -67,7 +67,7 @@ export default {
   // appelles sous la forme de await Promise.all vers apis fictifs crées avec my-json-server
   async created(){
     await Promise.all([
-      fetch(this.api + 'navba'),
+      fetch(this.api + 'navbar'),
       fetch(this.api + 'purchases'),
       fetch(this.api + 'info'),
       fetch(this.api + 'delivery'),
