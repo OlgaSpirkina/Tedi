@@ -145,7 +145,7 @@ a{
 }
 @media (orientation: landscape) and (min-width : 300px){
   nav{
-    height: 25vh;
+    height: 27vh;
   }
 }
 @media screen and (max-width: 1199px) {
