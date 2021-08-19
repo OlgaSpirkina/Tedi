@@ -143,7 +143,7 @@ a{
 .fa-bars{
   display: none;
 }
-@media (orientation: landscape) and (min-width : 300px){
+@media (orientation: landscape) and (min-width : 300px) and (max-width : 900px){
   nav{
     height: 27vh;
   }
